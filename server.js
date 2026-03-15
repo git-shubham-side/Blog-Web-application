@@ -32,7 +32,6 @@ app.get("/signup", (req, res) => {
   res.render("signup");
 });
 
-console.log("hello");
 // Start server
 app.listen(process.env.PORT, () => {
   console.log(`Server running on http://localhost:${process.env.PORT}`);
