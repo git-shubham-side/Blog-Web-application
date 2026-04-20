@@ -32,10 +32,14 @@ function checkUserType(req, res, next) {
 // Routes
 app.get("/", (req, res) => res.redirect("/login"));
 app.get("/login", (req, res) => res.render("login"));
-app.post("/login", async (req, res) => res.json({ message: "data recived" }));
+app.post("/login", async (req, res) => {
+  console.log(req.body);
+  res.json({ message: "data recived" });
+});
 app.get("/signup", (req, res) => res.render("signup"));
 app.post("/signup", checkUserType, async (req, res) => {
-  if (req.body.role === "reader") return res.json({ message: "Reader" });
+  console.log(req.body);
+  res.json({ message: "data recived" });
 });
 
 // Start server

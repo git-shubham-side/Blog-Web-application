@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="/css/login.css" />
+    <link rel="stylesheet" href="/css/Login/login.css" />
   </head>
   <body>
     <main>
@@ -18,16 +18,21 @@
             placeholder="email"
             id="email-label"
           />
-          <br />
           <label for="pass">Password</label>
-          <input type="text" name="password" id="pass" placeholder="password" />
-          <br />
+          <span>
+            <input
+              type="password"
+              name="password"
+              id="pass"
+              placeholder="password"
+            />
+            <img src="/images/Signup/eye.png" alt="toggle" id="eyeImg" />
+          </span>
           <button type="submit">Login</button>
-          <br />
-          <br />
           <p>Don't have account? <a href="/signup">Signup</a></p>
         </form>
       </div>
     </main>
+    <script src="/js/login.js"></script>
   </body>
 </html>

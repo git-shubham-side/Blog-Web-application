@@ -1,0 +1,154 @@
+/* Importing a clean, high-readability SaaS font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  /* Soft gradient for that premium SaaS feel */
+  background: radial-gradient(circle at top left, #f8fafc, #e2e8f0);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+main {
+  width: 100%;
+  max-width: 420px;
+}
+
+.signup {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 1.25rem;
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.05),
+    0 10px 10px -5px rgba(0, 0, 0, 0.02);
+  border: 1px solid #f1f5f9;
+}
+
+h1 {
+  color: #0f172a;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.875rem;
+  color: #475569;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* Text Input Styling */
+input[type="text"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: #1e293b;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+/* Radio Group (SaaS Toggle Style) */
+.radio-group {
+  display: flex;
+  gap: 0.75rem;
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.radio-group label {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem;
+  background-color: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.radio-group label:hover {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+/* Highlight style when radio is checked (Basic implementation) */
+.radio-group input[type="radio"] {
+  accent-color: #2563eb;
+  cursor: pointer;
+}
+
+/* Submit Button */
+button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.1s ease;
+  margin-top: 0.5rem;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Footer Link */
+p {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+p a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 0.25rem;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+/* Hiding default breaks to let Flexbox handle spacing */
+br {
+  display: none;
+}
