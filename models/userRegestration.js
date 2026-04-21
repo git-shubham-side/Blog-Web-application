@@ -6,7 +6,7 @@ async function main() {
   await mongoose.connect("mongodb://127.0.0.1:27017/Blog-App");
 }
 
-const ReaderSchema = mongoose.Schema({
+const userSchema = mongoose.Schema({
   firstName: {
     type: String,
     required: true,
@@ -31,10 +31,9 @@ const ReaderSchema = mongoose.Schema({
     required: true,
   },
   role: {
-    type: String,
-    default: "guest",
+    enum: ["guest", "writer", "reader"],
   },
 });
 
-const ReaderUser = mongoose.model("ReaderUser", ReaderSchema);
-export { ReaderUser };
+const User = mongoose.model("User", userSchema);
+export default User;

@@ -1,15 +1,17 @@
-// ✅ Sabse pehle dotenv
 import "dotenv/config";
 
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-import { ReaderUser } from "./models/ReaderUser.js";
 
 // __dirname fix for ES Modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+//Models
+import User from "./models/userRegestration.js";
+
+//App
 const app = express();
 
 // View engine
@@ -36,10 +38,19 @@ app.post("/login", async (req, res) => {
   console.log(req.body);
   res.json({ message: "data recived" });
 });
+//Signup
 app.get("/signup", (req, res) => res.render("signup"));
-app.post("/signup", checkUserType, async (req, res) => {
-  console.log(req.body);
-  res.json({ message: "data recived" });
+app.post("/signup", async (req, res) => {
+  const { firstName, lastName, password, confirmPass, userRole } = req.body;
+  const pass = "";
+  if (password === confirmPass) {
+    pass = password;
+  } else {
+    res
+      .status(401)
+      .json({ message: "please enter correct password in both fields!" });
+  }
+  // const user = await User(req.body);
 });
 
 // Start server

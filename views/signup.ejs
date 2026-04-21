@@ -9,7 +9,7 @@
   <body>
     <main>
       <div class="signup">
-        <form action="/signup" method="POST">
+        <form action="/signup" method="POST" id="form">
           <h1>Signup</h1>
           <br />
           <label for="firstName">First Name</label>
@@ -19,20 +19,20 @@
           <input type="text" name="lastName" id="lastName" required />
           <br />
           <label for="Email">Email</label>
-          <input type="text" name="eamil" required />
+          <input type="text" name="email" required id="email" />
           <br />
           <label for="pass">Password</label>
           
-            <input type="text" name="password" required />
+            <input type="text" name="password" required maxlength="15" minlength="8" id="pass" />
           </span>
           <br />
           <label for="confirmPass">Confirm Password</label>
 
-          <input type="text" name="confirmPass" required />
+          <input type="text" name="confirmPass" required maxlength="15" minlength="8" id="confirmPass"/>
 
           <br />
           <label for="options">I wan't to join as</label>
-          <div class="radio-group">
+          <div class="radio-group" >
             <label
               ><input type="radio" name="userRole" value="reader" required />
               Reader</label
@@ -47,11 +47,12 @@
             >
           </div>
           <br />
-          <button type="submit">Signup</button>
+          <button type="submit" id="submit">Signup</button>
           <br />
           <p>Already have an account?<a href="/login">Login</a></p>
         </form>
       </div>
     </main>
+    <script src="/js/signup.js"></script>
   </body>
 </html>
